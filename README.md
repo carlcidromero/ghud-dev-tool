@@ -1,6 +1,6 @@
 # ghud-dev-tool
 
-A visualization tool for developers juggling multiple projects that follows a simple flavor of the Four To Floor approach to throughput optimization.
+A visualization tool for software engineers juggling multiple projects that follows a simple flavor of the Four To Floor approach to throughput optimization. The current Ghud Dev Tool feature set naturally aligns with the majority of software engineers' workflow. However, non-technical users may leverage the same with minimal adjustment to their own workflow.
 
 ## References:
 

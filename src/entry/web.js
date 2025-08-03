@@ -1,24 +1,5 @@
-class ProjectDto {
-  id;
-  name;
-  commitHistoryUrl;
-  metadata;
-
-  constructor(id, name, commitHistoryUrl, metadata) {
-    this.id = id;
-    this.name = name;
-    this.commitHistoryUrl = commitHistoryUrl;
-    this.metadata = metadata;
-  }
-}
-
-class MetadataDto {
-  description;
-
-  constructor(description) {
-    this.description = description;
-  }
-}
+import { ProjectDto } from "../adapter/ProjectDto.js";
+import { MetadataDto } from "../adapter/MetadataDto.js";
 
 const projects = [
   new ProjectDto(1, "alpha", "some-link", new MetadataDto("This is alpha")),
@@ -30,6 +11,7 @@ const projects = [
     new MetadataDto("This is charlie.")
   ),
   new ProjectDto(4, "delta", "some-link", new MetadataDto("This is delta.")),
+  new ProjectDto(5, "echo", "some-link", new MetadataDto("This is echo.")),
 ];
 
 const projectsUl = document.querySelector("ul.gdt__projects");
@@ -42,7 +24,7 @@ let li;
 let button;
 let span;
 
-const remover = (event) => {
+const remove = (event) => {
   const data = event.target.getAttribute("data-project");
   scopeUl.removeChild(
     Array.from(scopeUl.children).find(
@@ -56,7 +38,7 @@ const remover = (event) => {
   ).disabled = false;
 };
 
-const adder = (event) => {
+const add = (event) => {
   const data = event.target.getAttribute("data-project");
   span = document.createElement("span");
   span.textContent = data;
@@ -64,7 +46,7 @@ const adder = (event) => {
   button = document.createElement("button");
   button.textContent = "Remove";
   button.setAttribute("data-project", data);
-  button.addEventListener("click", remover);
+  button.addEventListener("click", remove);
   button.classList.add("gdt__remove-button");
   li.appendChild(button);
   li.appendChild(span);
@@ -84,7 +66,7 @@ projects.forEach((project) => {
   button.textContent = "Scope";
   button.setAttribute("data-project", data(project));
   button.classList.add("gdt__add-button");
-  button.addEventListener("click", adder);
+  button.addEventListener("click", add);
   li.appendChild(button);
   li.appendChild(span);
   projectsUl.appendChild(li);
