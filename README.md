@@ -2,6 +2,16 @@
 
 A visualization tool for software engineers juggling multiple projects that follows a simple flavor of the Four To Floor approach to throughput optimization. The current Ghud Dev Tool feature set naturally aligns with the majority of software engineers' workflow. However, non-technical users may leverage the same with minimal adjustment to their own workflow.
 
+## Release notes:
+
+### v0.1.0
+
+- MVP: Organize a list of projects as in or out of scope.
+
+### v0.2.0
+
+- Restrict scope to four projects.
+
 ## References:
 
 - https://ghud.org/releases/ghud-dev-tool
