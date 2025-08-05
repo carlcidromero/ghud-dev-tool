@@ -12,6 +12,10 @@ A visualization tool for software engineers juggling multiple projects that foll
 
 - Restrict scope to four projects.
 
+### v0.3.0
+
+- Consume GitHub commit data.
+
 ## References:
 
 - https://ghud.org/releases/ghud-dev-tool

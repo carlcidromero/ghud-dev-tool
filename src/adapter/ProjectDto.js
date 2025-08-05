@@ -1,13 +1,13 @@
 export class ProjectDto {
   id;
   name;
-  commitHistoryUrl;
+  owner;
   metadata;
 
-  constructor(id, name, commitHistoryUrl, metadata) {
+  constructor(id, name, owner, metadata) {
     this.id = id;
     this.name = name;
-    this.commitHistoryUrl = commitHistoryUrl;
+    this.owner = owner;
     this.metadata = metadata;
   }
 }
